@@ -27,14 +27,16 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	if message.Content == "$create" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.CreateEmbed())
 	}
-	if message.Content=="$config" {
+	if message.Content == "$config" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.ConfigEmbed())
 	}
-	if message.Content=="$changes" {
+	if message.Content == "$changes" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.ChangesEmbed())
 	}
-	if message.Content=="$redo" {
+	if message.Content == "$redo" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.RedoEmbed())
 	}
-
+	if message.Content == "$info" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.InfoEmbed())
+	}
 }

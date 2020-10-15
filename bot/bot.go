@@ -3,7 +3,6 @@ package bot
 import (
 	"fmt"
 
-	"github.com/Clinet/discordgo-embed"
 	"github.com/bwmarrin/discordgo"
 	"github.com/rodzy/Flanker/handlers"
 )

@@ -24,4 +24,7 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	if message.Content == "$branch" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.BranchEmbed())
 	}
+	if message.Content == "$create" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.CreateEmbed())
+	}
 }

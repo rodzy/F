@@ -5,6 +5,7 @@ import (
 
 	"github.com/Clinet/discordgo-embed"
 	"github.com/bwmarrin/discordgo"
+	"github.com/rodzy/Flanker/handlers"
 )
 
 //ID var
@@ -30,6 +31,14 @@ func Start(token string) {
 
 	ID = user.ID
 
-	Session.AddHandler(StateHandler)
+	Session.AddHandler(handlers.StateHandler)
 
+	err = Session.Open()
+	if err != nil {
+		fmt.Println(err.Error())
+		return
+	}
+	fmt.Println("Flanker running, type $help for commands")
+	<-make(chan struct{})
+	return
 }

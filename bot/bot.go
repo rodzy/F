@@ -5,13 +5,9 @@ import (
 
 	"github.com/bwmarrin/discordgo"
 	"github.com/rodzy/Flanker/handlers"
+	"github.com/rodzy/Flanker/structs"
 )
 
-//ID var
-var ID string
-
-//Session var
-var Session *discordgo.Session
 
 //Start initializates the process of conection
 func Start(token string) {
@@ -28,9 +24,10 @@ func Start(token string) {
 		return
 	}
 
-	ID = user.ID
+	structs.ID = user.ID
 
 	Session.AddHandler(handlers.StateHandler)
+	Session.AddHandler(handlers.MessageHandler)
 
 	err = Session.Open()
 	if err != nil {

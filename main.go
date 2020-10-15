@@ -15,7 +15,7 @@ func main() {
 		log.Fatal("Error loading the env file")
 	}
 	token := os.Getenv("DISCORD_TOKEN")
-	
+
 	if token == "" {
 		fmt.Println("Couldn't allocate for Token")
 		return

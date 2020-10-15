@@ -33,6 +33,8 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	if message.Content=="$changes" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.ChangesEmbed())
 	}
-	
-	
+	if message.Content=="$redo" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.RedoEmbed())
+	}
+
 }

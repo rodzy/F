@@ -27,4 +27,8 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	if message.Content == "$create" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.CreateEmbed())
 	}
+	if message.Content=="$config" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.ConfigEmbed())
+	}
+	
 }

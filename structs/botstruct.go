@@ -11,9 +11,3 @@ var (
 	//Session var
 	Session *discordgo.Session
 )
-
-
-type bot struct{
-	ID string
-	Session *discordgo.Session
-}

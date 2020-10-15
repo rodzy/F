@@ -9,7 +9,7 @@ import (
 )
 
 //MessageHandler controls the way messages are displayed
-func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
+func MessageHandler(session *discordgo.Session, message *discordgo.MessageCreate) {
 	if strings.HasPrefix(message.Content, "$") {
 		if message.Author.ID == structs.ID {
 			return
@@ -38,5 +38,11 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	}
 	if message.Content == "$info" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.InfoEmbed())
+	}
+	if message.Content == "$sync" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.SyncEmbed())
+	}
+	if message.Content == "$tuto" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.TutoEmbed())
 	}
 }

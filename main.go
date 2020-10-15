@@ -2,13 +2,24 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"os"
 
-	"github.com/rodzy/Flanker/config"
+	"github.com/joho/godotenv"
+	// "github.com/rodzy/Flanker/config"
 )
 
 func main()  {
-	err:=config.ReadConfig
+	err:=godotenv.Load();
 	if err != nil {
-		fmt.Print("Connection failed")
+		log.Fatal("Error loading the env file")
 	}
+
+	test:=os.Getenv("DISCORD_TOKEN")
+	fmt.Print(test)
+
+	// erre:=config.ReadConfig
+	// if erre != nil {
+	// 	fmt.Print("Connection failed")
+	// }
 }

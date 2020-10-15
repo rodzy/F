@@ -1,0 +1,2 @@
+observe: *.go
+worker: Flanker

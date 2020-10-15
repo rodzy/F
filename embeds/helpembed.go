@@ -2,12 +2,12 @@ package embeds
 
 import (
 	"time"
-	
+
 	"github.com/bwmarrin/discordgo"
 )
 
 //HelpEmbed displays the embed on command
-func HelpEmbed() *discordgo.MessageEmbed  {
+func HelpEmbed() *discordgo.MessageEmbed {
 	embed := &discordgo.MessageEmbed{
 		Author: &discordgo.MessageEmbedAuthor{
 			Name:    "Flankerbot",
@@ -20,47 +20,47 @@ func HelpEmbed() *discordgo.MessageEmbed  {
 			{
 				Name:   "Install",
 				Value:  "```html\n⌘ -> $install```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Create repositories",
 				Value:  "```html\n⌘ -> $create```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Configure tooling",
 				Value:  "```html\n⌘ -> $config```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "The .gitignore file",
 				Value:  "```html\n⌘ -> $ignore```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Branches",
 				Value:  "```html\n⌘ -> $branch```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Make changes",
 				Value:  "```html\n⌘ -> $changes```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Synchronize changes",
 				Value:  "```html\n⌘ -> $sync```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Redo commits",
 				Value:  "```html\n⌘ -> $redo```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Git Information",
 				Value:  "```html\n⌘ -> $info```",
-				Inline: false,
+				Inline: true,
 			},
 			{
 				Name:   "Tutorial",
@@ -68,16 +68,15 @@ func HelpEmbed() *discordgo.MessageEmbed  {
 				Inline: false,
 			},
 		},
-		Thumbnail: &discordgo.MessageEmbedThumbnail{
-			URL: "https://gitforwindows.org/img/gwindows_logo.png",
-		},
+		// Thumbnail: &discordgo.MessageEmbedThumbnail{
+		// 	URL: "https://gitforwindows.org/img/gwindows_logo.png",
+		// },
 		Footer: &discordgo.MessageEmbedFooter{
-			Text: "Want to learn more about using GitHub and Git? Email the Training Team or visit the web site for learning event schedules and private class availability.\nservices@github.com\nhttps://services.github.com/",
+			Text: "Learn more about using GitHub and Git: \nservices@github.com\nhttps://services.github.com/",
 		},
 		Timestamp: time.Now().Format(time.RFC3339),
 		Title:     "Flankerbot - Git Commands",
 	}
-	
+
 	return embed
 }
-

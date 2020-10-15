@@ -11,8 +11,8 @@ func RedoEmbed() *discordgo.MessageEmbed  {
 	embed := &discordgo.MessageEmbed{
 		Author: &discordgo.MessageEmbedAuthor{
 			Name:    "Flankerbot",
-			URL:     "https://github.com/rodzy",
-			IconURL: "https://cdn.discordapp.com/avatars/703454326722396161/16ea3509f9a41b475966b85565a930fa.webp?size=128",
+			URL:     "https://github.com/rodzy/F",
+			IconURL: "https://cdn.discordapp.com/avatars/703454326722396161/e70c1562f842ede26dbb80404b1206a5.webp?size=128",
 		},
 		Color:       0x66ccff,
 		Description: "Erase mistakes and craft replacement history",

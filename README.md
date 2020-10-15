@@ -6,10 +6,6 @@
 
 F is the non experimental version of the original ["flanker"](https://github.com/rodzy/flanker-discordbot) the discord bot for git commands and info about the version control system
 
-<p align="right">
-    <img src=".github/assets/flanker-bot.png" width=70 alt="flanker-logo"/>
-</p>
-
 ## Connect to discord
 
 [Get Flanker here!](https://discord.com/oauth2/authorize?client_id=703454326722396161&permissions=519232&scope=bot)

@@ -21,4 +21,7 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	if message.Content == "$install" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.InstallEmbed())
 	}
+	if message.Content == "$branch" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.BranchEmbed())
+	}
 }

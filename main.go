@@ -6,20 +6,20 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	// "github.com/rodzy/Flanker/config"
+	"github.com/rodzy/Flanker/bot"
 )
 
-func main()  {
-	err:=godotenv.Load();
+func main() {
+	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading the env file")
 	}
+	token := os.Getenv("DISCORD_TOKEN")
+	
+	if token == "" {
+		fmt.Println("Couldn't allocate for Token")
+		return
+	}
+	bot.Start(token)
 
-	test:=os.Getenv("DISCORD_TOKEN")
-	fmt.Print(test)
-
-	// erre:=config.ReadConfig
-	// if erre != nil {
-	// 	fmt.Print("Connection failed")
-	// }
 }

@@ -18,4 +18,7 @@ func MessageHandler(session *discordgo.Session, message *discordgo.Message) {
 	if message.Content == "$help" {
 		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.HelpEmbed())
 	}
+	if message.Content == "$install" {
+		_, _ = session.ChannelMessageSendEmbed(message.ChannelID, embeds.InstallEmbed())
+	}
 }
